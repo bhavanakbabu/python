@@ -1,11 +1,8 @@
-num=int(input("enter a number:"))
-factorial=1
-if(num<0):
-    print("factorial does not exist for -ve numbers")
-elif(num==0):
-    print("the factorial is zero is one")
-else:
-    for i in range(1,num+1):
-        factorial=factorial*i
-    print("the factorial is",factorial)
-        
+def fact(n):
+     if n==1:
+        return 1
+     else:
+         return n*fact(n-1)
+f=int(input("enter number to find factorial"))
+f=fact(f)
+print("the factorial is:",f)
